@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizzazione del Testo</title>
+    <title>Il medico di famiglia informa ...</title>
     <style>
         body {
             display: flex;
@@ -21,35 +21,8 @@
     </style>
 </head>
 <body>
-    <h1>Benvenuto! Questa pagina è stata visualizzata <span id="view-count">0</span> volte.</h1>
 
-    <script>
-        // Funzione per contare le visualizzazioni
-        if (localStorage.pageViews) {
-            localStorage.pageViews = Number(localStorage.pageViews) + 1;
-        } else {
-            localStorage.pageViews = 1;
-        }
-        document.getElementById('view-count').textContent = localStorage.pageViews;
+    <h1>Eppure ho tanta voglia di raccontarti di questi due giorni molto intensi. Ma solo considerando il fatto che ho dovuto creare tutto questo per fartelo sapere. Beh ...</h1>
 
-        // Simulazione di notifica (necessita di un back-end per la funzionalità reale)
-        async function sendNotification() {
-            try {
-                const response = await fetch('https://your-backend-url/api/notify', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ message: `La pagina è stata visualizzata ${localStorage.pageViews} volte` })
-                });
-                console.log('Notifica inviata', response.status);
-            } catch (error) {
-                console.error('Errore nell\'invio della notifica', error);
-            }
-        }
-
-        // Chiamata alla funzione (commentare se non si ha un backend configurato)
-        // sendNotification();
-    </script>
 </body>
 </html>
